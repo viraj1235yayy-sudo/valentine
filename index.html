@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Dinga 💕</title>
+
+<style>
+body {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  font-family: Comic Sans MS, cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 18px;
+  margin: 8px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#yes {
+  background: #ff4d6d;
+  color: white;
+}
+
+#no {
+  background: #adb5bd;
+  position: absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <img src="https://i.imgur.com/9p3YJ5G.jpg" alt="cute">
+
+  <h2>Hey dinga 👀💕</h2>
+
+  <p>
+    After late-night talks,<br>
+    your dad calling you dinga,<br>
+    and me hoping your exes don’t<br>
+    <b>kiss you out of nowhere</b> 😭🤡
+  </p>
+
+  <h3>Will you be my Valentine? 🌹</h3>
+
+  <button id="yes" onclick="yesClicked()">YES 💖</button>
+  <button id="no" onmouseover="moveNo()">no 😐</button>
+</div>
+
+<script>
+function yesClicked() {
+  document.body.innerHTML = `
+    <div style="
+      background:white;
+      padding:40px;
+      border-radius:25px;
+      text-align:center;
+      font-family:Comic Sans MS;
+      box-shadow:0 15px 40px rgba(0,0,0,0.3);
+    ">
+      <img src="https://i.imgur.com/Q6aZ8Qn.gif" style="width:280px; border-radius:20px;">
+      <h1>LET’S GOOOO 🥰💖</h1>
+      <p>
+        Best decision ever 😌<br>
+        Valentine’s Day officially secured 💌
+      </p>
+      <h2>🌹🌹🌹</h2>
+    </div>
+  `;
+}
+
+function moveNo() {
+  const no = document.getElementById("no");
+  const x = Math.random() * (window.innerWidth - 120);
+  const y = Math.random() * (window.innerHeight - 60);
+  no.style.left = x + "px";
+  no.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
